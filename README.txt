@@ -8,16 +8,22 @@ Works with Apple's current (as of June 2010) file format and the previous versio
 (pre-Jun 2010 and pre-Feb 2009).
 
 
+Convert to PDF
+==============
+
+Thanks to the great work by Ole Begemann into formatting these files into HTML.
+This script takes it the next step and converts the HTML files into PDFs.  The
+template has been updated to use a font size that better fits on a landscape
+page when using the convert utility.
+
 Usage
 -----
 
-itunesconnect2html.rb [options] file1 file2 ...
-    -o, --overwrite                  Overwrite output files if they exist
-
-fileX are the plain text files as downloaded from iTunes Connect.
-
-Example: ./itunesconnect2html.rb reports/2009/08/*.txt
-Result: The script will create a corresponding .html file for each .txt file
+convert.sh file1 file2 ...
+    no options
+    
+Example: ./convert.sh reports/2009/08/*.txt.gz
+Result: The script will create a corresponding .pdf file for each .txt file
   in the same directory as the .txt files.
 
 
